@@ -313,12 +313,100 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Sidebar becomes topbar */
+  .sidebar {
+    position: fixed;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 10px;
+    overflow-x: auto;
+    justify-content: space-around;
+  }
+
+  .sidebar:hover {
+    width: 100%;
+  }
+
+  .sidebar .logo {
+    font-size: 20px;
+    padding-left: 0;
+  }
+
+  .sidebar .nav-item {
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .nav-label {
+    font-size: 10px;
+    margin-left: 0;
+    opacity: 1 !important;
+  }
+
+  .main {
+    margin: 60px 0 0 0;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .banner-content {
+    max-width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 32px;
+  }
+
+  .banner p {
+    font-size: 14px;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-photo {
+    display: none;
+  }
+
+  .section {
+    padding: 0 20px;
+  }
+
+  .row {
+    gap: 10px;
+  }
+
   .tile {
     width: 140px;
     height: 100px;
   }
 
-  .banner h1 {
-    font-size: 32px;
+  .section.skills .tile img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #contact {
+    padding: 40px 20px;
+  }
+
+  #contact h2 {
+    font-size: 22px;
+  }
+
+  #contact p {
+    font-size: 14px;
   }
 }
