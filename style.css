@@ -128,7 +128,7 @@ body {
   right: 0;
   height: 100%;
   width: 40%;
-  background-image: linear-gradient(to right, #141414 20%, transparent), url('kshitij.jpeg');
+  background-image: linear-gradient(to right, #141414 20%, transparent), url('./assets/kshitij.jpeg');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
