@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kshitij | Netflix Style Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="logo">K</div>
+    <div class="nav-item" onclick="scrollToSection('banner')"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></div>
+    <div class="nav-item" onclick="scrollToSection('banner')"><i class="fas fa-user nav-icon"></i><span class="nav-label">About</span></div>
+    <div class="nav-item" onclick="scrollToSection('skills')"><i class="fas fa-code nav-icon"></i><span class="nav-label">Skills</span></div>
+    <div class="nav-item" onclick="scrollToSection('projects')"><i class="fas fa-briefcase nav-icon"></i><span class="nav-label">Projects</span></div>
+    <div class="nav-item" onclick="scrollToSection('contact')"><i class="fas fa-envelope nav-icon"></i><span class="nav-label">Contact</span></div>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <!-- Banner -->
+    <div class="banner" id="banner">
+      <div class="banner-content">
+        <h1>Kshitij Patki</h1>
+        <p>When code meets creativity. Portfolio of a developer building apps, experiences, and ideas.</p>
+        <div class="banner-buttons">
+          <button class="play-btn" onclick="document.location='//www.linkedin.com/in/kshitijpatki/'">
+              <i class="fab fa-linkedin" style="margin-right: 8px;"></i> LinkedIn
+          </button>
+          <button class="info-btn" onclick="window.location.href='//drive.google.com/file/d/1LZhWqiYIIIMoqW4KXGI_vCw1zBwMxHOK/view?usp=sharing'" ><i class="fas fa-envelope"></i> Resume </button>
+        </div>
+      </div>
+      <div class="hero-photo"></div>
+    </div>
+
+    <!-- Working On -->
+    <div class="section">
+      <h2>Working On</h2>
+      <div class="row">
+        <div class="tile"><img src="./assets/chess.png" /><div class="hover-name">Chess Game</div></div>
+        <div class="tile"><img src="https://images.unsplash.com/photo-1551033406-611cf9ff7956" /><div class="hover-name">NoteSync</div></div>
+        <div class="tile"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" /><div class="hover-name">DevTool UI</div></div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="row">
+        <div class="tile"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475" /><div class="hover-name">Spotify Portfolio</div></div>
+        <div class="tile"><img src="./assets/easynote.png" /><div class="hover-name">EasyNotes</div></div>
+        <div class="tile"><img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" /><div class="hover-name">Music Dashboard</div></div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section skills" id="skills">
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="tile" onclick="showPopup('React Native (Expo)', 'You\'ve built mobile apps, chess games, and integrated components like editors, music bars, and animations in React Native using Expo.')">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+          <div class="hover-name">React Native</div>
+        </div>
+        <div class="tile" onclick="showPopup('Next.js', 'You’ve used Next.js for portfolio and app backends, including routing and server-side logic.')">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
+          <div class="hover-name">Next.js</div>
+        </div>
+        <div class="tile" onclick="showPopup('Tailwind CSS', 'You use Tailwind for styling both mobile and web interfaces, showing strong preference and skill in utility-first CSS.')">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+          <div class="hover-name">Tailwind CSS</div>
+        </div>
+        <div class="tile" onclick="showPopup('SQLite / Expo SQLite', 'Used local database management for mobile apps, and explored syncing with remote PostgreSQL.')">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" />
+          <div class="hover-name">HTML</div>
+        </div>
+        <div class="tile" onclick="showPopup('SQLite / Expo SQLite', 'Used local database management for mobile apps, and explored syncing with remote PostgreSQL.')">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" />
+          <div class="hover-name">CSS</div>
+        </div>
+        <div class="tile" onclick="showPopup('SQLite / Expo SQLite', 'Used local database management for mobile apps, and explored syncing with remote PostgreSQL.')">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" />
+          <div class="hover-name">JAVAScript</div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:kshitij@example.com" style="color: white;">kshitij@example.com</a></p>
+      <p>GitHub • LinkedIn • Twitter</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
