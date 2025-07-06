@@ -28,13 +28,9 @@ body {
   align-items: flex-start;
   padding: 20px 0;
   gap: 20px;
-  transition: width 0.3s ease;
   overflow: hidden;
   z-index: 100;
-}
-
-.sidebar:hover {
-  width: 200px;
+  transition: width 0.3s ease;
 }
 
 .logo {
@@ -80,18 +76,25 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.sidebar:hover .nav-label {
-  opacity: 1;
+/* Sidebar hover effect only on desktop */
+@media (min-width: 769px) {
+  .sidebar:hover {
+    width: 200px;
+  }
+
+  .sidebar:hover .nav-label {
+    opacity: 1;
+  }
+
+  .sidebar:hover ~ .main {
+    margin-left: 200px;
+  }
 }
 
 /* Main layout */
 .main {
   margin-left: 60px;
   transition: margin-left 0.3s ease;
-}
-
-.sidebar:hover ~ .main {
-  margin-left: 200px;
 }
 
 /* Banner */
@@ -122,18 +125,22 @@ body {
   max-width: 600px;
 }
 
-.hero-photo {
+.hero-photo-desktop {
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
-  width: 40%;
-  background-image: linear-gradient(to right, #141414 20%, transparent), url('./assets/kshitij.jpeg');
-  background-size: cover;
-  background-position: center right;
+  width: 50%;
+  background-image: linear-gradient(to left, #141414 10%, transparent), url('./assets/kshitij.jpeg');
+  background-size: 130%;
+  background-position:  100% 75% ;
   background-repeat: no-repeat;
   z-index: 1;
+  transform: scaleX(-1);
   pointer-events: none;
+}
+.hero-photo-mobile {
+  display: none;
 }
 
 .banner h1 {
@@ -311,9 +318,25 @@ body {
   color: #aaa;
 }
 
-/* Responsive */
+/* Mobile responsive */
 @media (max-width: 768px) {
-  /* Sidebar becomes topbar */
+  .hero-photo-desktop {
+  display: none;
+}
+
+.hero-photo-mobile {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: url('./assets/kshitij.jpeg') no-repeat center center/cover;
+  background-size: 140%;
+  background-position:  40% 100% ; 
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   .sidebar {
     position: fixed;
     flex-direction: row;
@@ -325,27 +348,37 @@ body {
     padding: 0 10px;
     overflow-x: auto;
     justify-content: space-around;
+    align-items: center;
   }
 
-  .sidebar:hover {
-    width: 100%;
+  .logo {
+    display: none;
   }
 
-  .sidebar .logo {
-    font-size: 20px;
-    padding-left: 0;
-  }
-
-  .sidebar .nav-item {
+  .nav-item {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 5px;
+    font-size: 12px;
+  }
+
+  .nav-icon {
+    font-size: 16px;
   }
 
   .nav-label {
     font-size: 10px;
     margin-left: 0;
     opacity: 1 !important;
+  }
+
+  .sidebar:hover {
+    width: 100% !important;
+  }
+
+  .sidebar:hover ~ .main {
+    margin-left: 0 !important;
   }
 
   .main {
@@ -357,6 +390,8 @@ body {
     align-items: center;
     padding: 40px 20px;
     text-align: center;
+    height: auto;
+    background-position: center;
   }
 
   .banner-content {
@@ -376,6 +411,12 @@ body {
     gap: 10px;
   }
 
+  .banner-buttons button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
   .hero-photo {
     display: none;
   }
@@ -386,11 +427,16 @@ body {
 
   .row {
     gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .tile {
     width: 140px;
     height: 100px;
+  }
+
+  .tile img {
+    object-fit: cover;
   }
 
   .section.skills .tile img {
@@ -410,3 +456,4 @@ body {
     font-size: 14px;
   }
 }
+
