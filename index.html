@@ -1,102 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kshitij</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kshitij Portfolio</title>
+    <meta
+      name="description"
+      content="Kshitij Patki - React Native and full-stack developer portfolio with projects, experience, and skills."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div class="sun"></div>
 
-  
-  <div class="sidebar">
-    <div class="logo">K</div>
-    <div class="nav-item" onclick="scrollToSection('banner')"><i class="fas fa-home nav-icon"></i><span class="nav-label">Home</span></div>
-    <div class="nav-item" onclick="scrollToSection('banner')"><i class="fas fa-user nav-icon"></i><span class="nav-label">About</span></div>
-    <div class="nav-item" onclick="scrollToSection('skills')"><i class="fas fa-code nav-icon"></i><span class="nav-label">Skills</span></div>
-    <div class="nav-item" onclick="scrollToSection('projects')"><i class="fas fa-briefcase nav-icon"></i><span class="nav-label">Projects</span></div>
-    <div class="nav-item" onclick="scrollToSection('contact')"><i class="fas fa-envelope nav-icon"></i><span class="nav-label">Contact</span></div>
-  </div>
+    <div class="shell">
+      <header class="topbar reveal">
+        <div class="logo-block">
+          <span class="pixel-dot"></span>
+          <span class="logo-text">KSHITIJ_PATKI.EXE</span>
+        </div>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#game">Game</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-  
-  <div class="main">
-    
-<div class="banner" id="banner">
-  <div class="banner-content">
-    <h1>Kshitij Patki</h1>
-    <p>Welcome to my portfolio — a curated space where design meets functionality. With a passion for clean code and captivating UI, I specialize in building responsive, user-first applications using tools like React, Next.js, Tailwind CSS, and Expo/React Native.</p>
-    <div class="banner-buttons">
-      <button class="play-btn" onclick="document.location='//www.linkedin.com/in/kshitijpatki/'">
-          <i class="fab fa-linkedin" style="margin-right: 8px;"></i> LinkedIn
-      </button>
-      <button class="info-btn" onclick="window.location.href='//drive.google.com/file/d/1LZhWqiYIIIMoqW4KXGI_vCw1zBwMxHOK/view?usp=sharing'"><i class="fas fa-envelope"></i> Resume </button>
+      <main>
+        <section class="hero reveal" id="home" data-section>
+          <div class="hero-panel intro-panel tilt-card">
+            <p class="pixel-kicker">NEW GAME</p>
+            <h1>Kshitij Patki builds full-stack products.</h1>
+            <p class="lead">
+              React Native developer focused on practical apps and clean backend
+              integration.
+            </p>
+            <div class="xp-panel">
+              <div class="xp-copy">
+                <span class="xp-label">Builder XP</span>
+                <strong class="xp-value" data-counter="21">21</strong>
+              </div>
+              <div class="xp-bar">
+                <span class="xp-fill"></span>
+              </div>
+            </div>
+            <div class="cta-row">
+              <a class="cta cta-primary" href="#work">View Projects</a>
+              <a class="cta cta-secondary" href="#contact">Hire Me</a>
+            </div>
+          </div>
+
+          <div class="player-panel tilt-card">
+            <article class="tcg-card">
+              <header class="tcg-top">
+                <div class="tcg-left">
+                  <span class="tcg-basic">BASIC</span>
+                  <strong class="tcg-name">Kshitij ex</strong>
+                </div>
+                <div class="tcg-right">
+                  <span class="tcg-hp">HP 330</span>
+                  <span class="tcg-type">UX</span>
+                </div>
+              </header>
+
+              <div class="tcg-art">
+                <div class="tcg-burst"></div>
+                <img
+                  class="tcg-portrait"
+                  src="./assets/kshitij_full_art.jpeg"
+                  alt="Portrait of Kshitij"
+                />
+              </div>
+
+              <div class="tcg-attacks">
+                <div class="tcg-attack">
+                  <span class="tcg-energy">JS+RN</span>
+                  <span class="tcg-move">Full-Stack Build
+                    <small>Builds React Native apps with auth, storage, and APIs.</small>
+                  </span>
+                  <span class="tcg-dmg">120</span>
+                </div>
+                <div class="tcg-attack">
+                  <span class="tcg-energy">IOT</span>
+                  <span class="tcg-move">Realtime Sync
+                    <small>Streams live sensor and user data with cloud sync.</small>
+                  </span>
+                  <span class="tcg-dmg">330+</span>
+                </div>
+              </div>
+
+              <footer class="tcg-footer">
+                <span>specialty: mobile + cloud</span>
+                <span>role: full-stack developer</span>
+                <span>location: Mumbai, India</span>
+              </footer>
+              <div class="tcg-legal">
+                <span>BE 2022-PRESENT</span>
+                <span>★ ★</span>
+                <span>VESIT</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="dashboard reveal" id="about" data-section>
+          <article class="info-card tilt-card">
+            <p class="pixel-kicker">VALUE</p>
+            <h2>What I Bring</h2>
+            <p>
+              I build practical products end-to-end, from interface to backend.
+              My focus is fast execution, clean architecture, and features that
+              genuinely help users.
+            </p>
+          </article>
+          <article class="info-card tilt-card">
+            <p class="pixel-kicker">CURRENT MODE</p>
+            <h2>Open to Software Engineering Opportunities</h2>
+            <p>
+              Freelance Web Developer for Maceast Construction (Sep 2025) and
+              Senior Treasurer at IEEE-VESIT (May 2025 - Present), managing
+              budgets of INR 1,00,000+ and VES-HACK-IT operations.
+            </p>
+          </article>
+        </section>
+
+        <section class="showcase reveal" id="work" data-section>
+          <div class="section-head">
+            <p class="pixel-kicker">LEVEL SELECT</p>
+            <h2>Projects I Built</h2>
+          </div>
+          <div class="project-list">
+            <article class="project-card project-red tilt-card">
+              <span class="project-no">01</span>
+              <h3>BuckIt - Collaborative Bucket List App</h3>
+              <p>
+                React Native + Supabase app for shared bucket lists, usernames,
+                and photo uploads.
+              </p>
+              <button
+                class="project-trigger"
+                type="button"
+                onclick="window.open('https://github.com/Kush1612/BuckIt','_blank','noopener,noreferrer')"
+              >
+                View Stack
+              </button>
+            </article>
+            <article class="project-card project-blue tilt-card">
+              <span class="project-no">02</span>
+              <h3>FitG - Workout, Goals and Wellness Tracker</h3>
+              <p>
+                React Native + Firebase app with workout tracking, weekly
+                analytics, reminders, and OTA updates.
+              </p>
+              <button
+                class="project-trigger"
+                type="button"
+                onclick="window.open('https://github.com/Kush1612/FitG','_blank','noopener,noreferrer')"
+              >
+                View Stack
+              </button>
+            </article>
+            <article class="project-card project-green tilt-card">
+              <span class="project-no">03</span>
+              <h3>Smart Water Metering System</h3>
+              <p>
+                ESP32 + React Native IoT system with Appwrite and BLE for
+                real-time water monitoring.
+              </p>
+              <button
+                class="project-trigger"
+                type="button"
+                onclick="window.open('https://github.com/Kush1612/HAKA','_blank','noopener,noreferrer')"
+              >
+                View Stack
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <section class="game-section reveal" id="game" data-section>
+          <div class="section-head">
+            <p class="pixel-kicker">BONUS STAGE</p>
+            <h2>Play The FPS Mini Game</h2>
+          </div>
+          <div class="game-shell tilt-card">
+            <div class="game-topbar">
+              <div class="game-scoreboard">
+                <span class="score-chip">Kills: <strong data-game-score>0</strong></span>
+                <span class="score-chip">Best: <strong data-game-best>0</strong></span>
+                <span class="score-chip">Health: <strong data-game-health>100</strong></span>
+              </div>
+              <button type="button" class="cta cta-secondary game-restart" data-game-restart>
+                Restart
+              </button>
+            </div>
+            <canvas
+              class="game-canvas"
+              data-game-canvas
+              width="920"
+              height="320"
+              aria-label="Retro FPS mini game"
+            ></canvas>
+            <div class="game-controls">
+              <p class="game-help">
+                Move with <strong>A / D</strong> or <strong>Left / Right</strong>.
+                Aim with your <strong>mouse</strong> and shoot with <strong>click</strong> or <strong>Space</strong>.
+              </p>
+              <div class="game-status" data-game-status>Press shoot to start</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills-section reveal" id="skills" data-section>
+          <div class="section-head">
+            <p class="pixel-kicker">POWER UPS</p>
+            <h2>Skills</h2>
+          </div>
+          <div class="skills-board">
+            <button type="button" class="skill-chip is-active">React Native</button>
+            <button type="button" class="skill-chip">React.js</button>
+            <button type="button" class="skill-chip">JavaScript</button>
+            <button type="button" class="skill-chip">Java</button>
+            <button type="button" class="skill-chip">Python</button>
+            <button type="button" class="skill-chip">PostgreSQL</button>
+            <button type="button" class="skill-chip">Firebase</button>
+            <button type="button" class="skill-chip">Supabase</button>
+            <button type="button" class="skill-chip">REST APIs</button>
+            <button type="button" class="skill-chip">ESP32</button>
+            <button type="button" class="skill-chip">Arduino</button>
+            <button type="button" class="skill-chip">Raspberry Pi</button>
+            <button type="button" class="skill-chip">Git & GitHub</button>
+            <button type="button" class="skill-chip">Postman</button>
+            <button type="button" class="skill-chip">PowerBI</button>
+            <button type="button" class="skill-chip">SQL</button>
+          </div>
+          <div class="skills-console">
+            <span class="console-label">Selected Power-Up</span>
+            <strong class="console-output">React Native</strong>
+          </div>
+        </section>
+
+        <section class="contact-section reveal" id="contact" data-section>
+          <div class="contact-card tilt-card">
+            <p class="pixel-kicker">CONTINUE?</p>
+            <h2>Let's build your next product.</h2>
+            <p>
+              Open to internships and freelance projects in React Native and
+              full-stack development.
+            </p>
+            <div class="cta-row">
+              <a class="cta cta-primary" href="mailto:kshitijpatki244@gmail.com">Email</a>
+              <a class="cta cta-secondary" href="https://drive.google.com/file/d/17xB3mjI-c38xxrdcyjsd1b0Ngrb-HdCy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                >View Resume</a
+              >
+              <a class="cta cta-secondary" href="https://github.com/"
+                >GitHub</a
+              >
+              <a class="cta cta-secondary" href="https://linkedin.com/"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-  </div>
 
-  <div class="hero-photo-desktop"></div>
-<div class="hero-photo-mobile"></div>
-</div>
-
-
-    
-    <div class="section">
-      <h2>Working On</h2>
-      <div class="row">
-        <div class="tile"><img src="./assets/chess.png" /><div class="hover-name">Chess-Ka</div></div>
-        </div>
-    </div>
-
-    
-    <div class="section" id="projects">
-      <h2>Projects</h2>
-      <div class="row">
-        <div class="tile"><img src="./assets/easynote.png" /><div class="hover-name">EasyNotes</div></div>
-        <div class="tile"><img src="./assets/Gemini_Generated_Image_922rtg922rtg922r.png" /><div class="hover-name">HAKA Water Metering App</div></div>
-      </div>
-    </div>
-
-    
-    <div class="section skills" id="skills">
-      <h2>Skills</h2>
-      <div class="row">
-        <div class="tile" onclick="showPopup('React Native (Expo)', 'You\'ve built mobile apps, chess games, and integrated components like editors, music bars, and animations in React Native using Expo.')">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-          <div class="hover-name">React Native</div>
-        </div>
-        <div class="tile" onclick="showPopup('Next.js', 'You’ve used Next.js for portfolio and app backends, including routing and server-side logic.')">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
-          <div class="hover-name">Next.js</div>
-        </div>
-        <div class="tile" onclick="showPopup('Tailwind CSS', 'You use Tailwind for styling both mobile and web interfaces, showing strong preference and skill in utility-first CSS.')">
-          <img src="./assets/tailwind-css-icon.png" />
-          <div class="hover-name">Tailwind CSS</div>
-        </div>
-        <div class="tile" onclick="showPopup('SQLite / Expo SQLite', 'Used local database management for mobile apps, and explored syncing with remote PostgreSQL.')">
-          <img src="./assets/pngegg (4).png" />
-          <div class="hover-name">HTML</div>
-        </div>
-        <div class="tile" onclick="showPopup('SQLite / Expo SQLite', 'Used local database management for mobile apps, and explored syncing with remote PostgreSQL.')">
-          <img src="./assets/pngegg (5).png" />
-          <div class="hover-name">CSS</div>
-        </div>
-        <div class="tile" onclick="showPopup('SQLite / Expo SQLite', 'Used local database management for mobile apps, and explored syncing with remote PostgreSQL.')">
-          <img src="./assets/pngegg (3).png" />
-          <div class="hover-name">JAVAScript</div>
-        </div>
-        
-      </div>
-    </div>
-
-    <!-- Contact -->
-    <div id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:kshitijpatki244@gmail.com" style="color: white;">kshitijpatki244@gmail.com</a></p>
-      <p><a href="https://github.com/Kush1612" style="color: white; ">GitHub</a> • <a href="https://www.linkedin.com/in/kshitijpatki/" style="color: white;">LinkedIn </a></p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
